@@ -40,3 +40,5 @@ RUN curl -fsSL "$GOLANG_DOWNLOAD_URL" -o golang.tar.gz \
     && rm -rf /usr/local/go_bootstrap
 
 ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
+
+RUN go get -u github.com/kardianos/govendor
